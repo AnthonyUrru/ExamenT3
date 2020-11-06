@@ -1,0 +1,53 @@
+﻿ @{ 
+     List<Ejercicio> ejercicios = ((List<Ejercicio>)ViewBag.Ejercicios);
+
+     List<Rutine> rutines = ((List<Rutine>)Model);
+
+  }
+        <h1>TODOS LOS EJERCICIOS</h1>
+        <form action="/ToDoList/buscar" method="post">
+            Buscar username
+            <input type="text" name="username" />
+            <button>Buscar</button>
+        </form>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre Rutina</th>
+                    <th>Tipo</th>
+                    <th>Tiempo</th>
+                    @for (int i=0;i<ejercicios.Count;i++)
+                    {
+                        <th>Nombre </th>
+                        <th>Link </th>
+                    }
+
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in rutines)
+                {
+                <tr>
+                    <td>@item.Nombre</td>
+                    <td>@item.Tipo</td>
+                    <td >
+                       
+                    </td>
+                  
+
+                    @foreach (var item2 in ejercicios)
+                    {
+
+                        
+                        <td>@item2.NombreEjercicio</td>
+                        <td>@item2.LinkVideo</td>
+                    }
+
+
+                </tr>
+                }
+            </tbody>
+        </table>

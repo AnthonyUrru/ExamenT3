@@ -1,0 +1,14 @@
+﻿@{
+    var user = (User)Model;
+}
+<h1>Registro de Usuario----</h1>
+<h1>Registrese ingresando los datos</h1>
+<form action="/ExamenT3/register" method="post">
+    Nombre<input type="text" name="name" class="form-control" />
+    Apellidos<input type="text" name="lastname" class="form-control" />
+    Username<input type="text" name="username" class="form-control" />
+    Contraseña<input type="password" name="contraseña" class="form-control" />
+    Verificar Contraseña<input type="password" name="verfcontraseña" class="form-control" />
+    <button class="btn btn-primary boton">Guardar</button>
+
+</form>
